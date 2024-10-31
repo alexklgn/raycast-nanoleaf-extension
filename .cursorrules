@@ -1,0 +1,187 @@
+You are an expert in TypeScript, React, and Raycast Extension Development.
+
+## Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples.
+- Use modern ES6+ syntax and features (e.g., arrow functions, destructuring, async/await).
+- Prefer functional programming patterns; use React functional components with hooks.
+- Break down code into small, reusable modules, components, and functions.
+- Use descriptive variable and function names with clear intent (e.g., `NanoleafController`, `fetchDevices`).
+- Organize files by feature and functionality.
+
+## Project Structure
+
+- **Directories**: Use lowercase with hyphens for directories (e.g., `utils`, `components`, `types`).
+- **File Naming**: Use lowercase with hyphens for filenames (e.g., `nanoleaf-controller.ts`, `storage.ts`).
+- **Extensions**: Use `.ts` for TypeScript files and `.tsx` for TypeScript React files.
+
+## TypeScript Usage
+
+- Use strict typing; ensure all variables and functions have explicit type definitions.
+- Prefer `const` and `let` over `var` for variable declarations.
+- Use `const` for variables that should not be reassigned.
+- Leverage Promises and `async/await` for asynchronous code.
+- Handle errors using try/catch blocks and propagate errors appropriately.
+- Avoid using `any`; find appropriate types or use generics.
+
+## Syntax and Formatting
+
+- Use arrow functions for anonymous functions and callbacks.
+- Use template literals (``) for string concatenation and interpolation.
+- Omit parentheses for single-parameter arrow functions when appropriate.
+- Use object and array destructuring for cleaner code.
+- Use ESLint with a standard style guide (e.g., Airbnb) for consistent code formatting.
+- Ensure code is formatted using Prettier for consistency.
+- Consistently use semicolons at the end of statements.
+
+## Async Operations
+
+- Use `async/await` for asynchronous operations.
+- Avoid callback hell by chaining promises or using async functions.
+- Handle asynchronous errors using try/catch blocks.
+
+## Logging and Debugging
+
+- Use `console.log` judiciously for debugging; remove or replace with proper logging in production code.
+- Avoid console logs in production code; use logging libraries if necessary.
+- Provide user feedback using Raycast's `Toast` component.
+
+## Error Handling and Validation
+
+- Validate user input and API responses to prevent errors.
+- Implement proper error handling for API calls to Nanoleaf devices.
+- Prioritize error handling and edge cases:
+  - Handle errors at the beginning of functions or modules.
+  - Use early returns for error conditions to avoid deep nesting.
+- Provide user-friendly error messages without exposing sensitive information.
+
+## React and Raycast API Usage
+
+- Use React functional components with hooks (`useState`, `useEffect`).
+- Leverage Raycast's components (`List`, `Form`, `ActionPanel`, `Action`, `Toast`) for building the UI.
+- Handle state and side effects using React hooks.
+- Pass event handlers as props to components in a clear and consistent manner.
+
+## API Integration
+
+- Interact with Nanoleaf devices using the `nanoleaf-client` library.
+- Use environment variables or Raycast preferences to store sensitive configuration if needed.
+- Handle API errors gracefully and provide feedback to the user via toasts.
+
+## Data Storage and Caching
+
+- Use Raycast's `LocalStorage` API for storing data persistently.
+- Interact with `LocalStorage` asynchronously and handle errors.
+
+## Performance Optimization
+
+- Minimize API calls by caching results when appropriate.
+- Use React's `useMemo` and `useCallback` hooks to prevent unnecessary re-renders.
+- Avoid blocking the UI; perform heavy computations asynchronously.
+
+## Security
+
+- Sanitize user inputs to prevent injection attacks.
+- Store API keys and tokens securely using Raycast's secure storage if necessary.
+- Keep dependencies up to date to patch vulnerabilities.
+
+## Best Practices
+
+1. **Modular Code**: Keep components and utilities modular for reusability and testing.
+2. **Documentation**: Comment code where necessary and maintain clear README files.
+3. **Version Control**: Use Git with meaningful commit messages and branching strategies.
+4. **Environment Management**: Use Raycast's preferences and environment configurations appropriately.
+5. **Testing**: Write unit tests for critical functions using Jest or similar frameworks.
+6. **Deployment**: Use `ray publish` to submit the extension to the Raycast store.
+
+## Internationalization (i18n)
+
+- Ensure the extension can handle text in multiple languages.
+- Use Unicode-safe methods for string manipulation.
+- Structure strings in a way that facilitates future localization if needed.
+
+## Error Monitoring and Reporting
+
+- Use Raycast's logging capabilities for debugging.
+- Implement error boundaries in React components if necessary.
+
+## Dependencies and Package Management
+
+- Use `npm` for package management.
+- Keep the `package.json` file updated with accurate dependency versions.
+- Avoid installing unnecessary packages to keep the project lightweight.
+
+## Git and Repository Management
+
+- Use `.gitignore` to exclude `node_modules`, build artifacts (`dist`), and other unnecessary files.
+- Write clear and descriptive commit messages.
+- Use branching strategies like Gitflow for collaborative development.
+
+## Continuous Integration and Deployment (CI/CD)
+
+- Set up CI pipelines to automate testing and linting on code changes.
+- Use build scripts to compile TypeScript code before publishing.
+
+## Documentation
+
+- Maintain up-to-date documentation in the `README.md` file.
+- Document setup instructions, environment variables, and scripts.
+- Provide examples of how to run and interact with the extension.
+
+## Comments and Code Readability
+
+- Write comments for complex logic and important sections.
+- Use JSDoc comments for functions and modules if necessary.
+- Keep code clean and readable; avoid excessively long functions.
+
+## Environment Variables and Configuration
+
+- Use Raycast preferences for configuration settings.
+- Validate required configurations at startup.
+
+## Accessibility and User Experience
+
+- Provide clear instructions and feedback to users.
+- Handle edge cases where the extension may not function as expected.
+- Ensure the extension responds promptly to maintain a good user experience.
+
+## Key Conventions
+
+1. **Async Programming**: Embrace asynchronous programming to handle I/O efficiently.
+2. **Immutable Data**: Avoid mutating input parameters; return new data structures when needed.
+3. **Configuration**: Centralize configuration settings for easy management.
+4. **Logging**: Use structured logging to aid in debugging and monitoring.
+
+## Testing
+
+- Write unit tests for utility functions and critical logic.
+- Use testing frameworks like Jest for running tests.
+- Mock external dependencies like APIs to test in isolation.
+
+## Personalization and User Preferences
+
+- Use Raycast preferences to store user preferences.
+- Provide commands or menus for users to set and update their preferences.
+- Validate and sanitize user-provided preference data.
+
+## Updates and Feature Flags
+
+- Implement feature toggles for new or experimental features.
+- Ensure backward compatibility when introducing changes.
+
+## API Documentation
+
+- Adhere to Nanoleaf's API usage policies.
+- Keep up-to-date with changes in external APIs.
+- Handle deprecated endpoints or features gracefully.
+
+---
+
+Refer to the official documentation for detailed information and best practices:
+
+- **TypeScript**: https://www.typescriptlang.org/docs/
+- **React**: https://reactjs.org/docs/getting-started.html
+- **Raycast API**: https://developers.raycast.com/
+- **Nanoleaf API**: https://forum.nanoleaf.me/docs/openapi
+
+Ensure adherence to these guidelines to maintain code quality, readability, and reliability across the project.
