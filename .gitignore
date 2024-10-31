@@ -1,0 +1,17 @@
+   # Node.js
+   node_modules/
+   npm-debug.log
+
+   # macOS
+   .DS_Store
+
+   # Logs
+   *.log
+
+   # Build directories
+   dist/
+   build/
+
+   # Environment variables
+   .env
+.cursorrules
