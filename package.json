@@ -1,0 +1,52 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "nanoleaf-raycast-extension",
+  "title": "Nanoleaf Controller",
+  "description": "Control your Nanoleaf devices from Raycast",
+  "icon": "extension_icon.png",
+  "author": "alexklgn",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "commands": [
+    {
+      "name": "my-devices",
+      "title": "My Devices",
+      "description": "Update your local devices list",
+      "mode": "view",
+      "subtitle": "Nanoleaf"
+    },
+    {
+      "name": "change-brightness",
+      "title": "Change Brightness",
+      "description": "Change brightness of Nanoleaf device",
+      "mode": "view",
+      "subtitle": "Nanoleaf",
+      "arguments": [
+        {
+          "name": "Brightness",
+          "placeholder": "Brightness in % (0-100)",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.84.3",
+    "local-devices": "^4.0.0",
+    "nanoleaf-client": "^0.2.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^18.0.28",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
